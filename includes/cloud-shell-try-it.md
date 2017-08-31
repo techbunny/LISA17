@@ -8,5 +8,5 @@ The button launches an interactive shell that you can use to run all of the step
 
 [![Screenshot showing the Cloud Shell window in the portal](https://github.com/techbunny/LISA17/blob/master/includes/media/cloud-shell-try-it/cloud-shell-safari.png)](https://portal.azure.com)
 
-If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.12 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0]( /cli/azure/install-azure-cli). 
+If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.12 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
 
