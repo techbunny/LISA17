@@ -1,25 +1,3 @@
----
-title: Quickstart - Azure Kubernetes cluster for Linux | Microsoft Docs
-description: Quickly learn to create a Kubernetes cluster for Linux containers in Azure Container Service with the Azure CLI.
-services: container-service
-documentationcenter: ''
-author: neilpeterson
-manager: timlt
-editor: ''
-tags: acs, azure-container-service, kubernetes
-keywords: ''
-
-ms.assetid: 8da267e8-2aeb-4c24-9a7a-65bdca3a82d6
-ms.service: container-service
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 08/21/2017
-ms.author: nepeters
-ms.custom: H1Hack27Feb2017, mvc
----
-
 # Deploy Kubernetes cluster for Linux containers
 
 In this quick start, a Kubernetes cluster is deployed using the Azure CLI. A multi-container application consisting of web front end and a Redis instance is then deployed and run on the cluster. Once completed, the application is accessible over the internet. 

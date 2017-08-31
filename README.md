@@ -2,6 +2,6 @@
 
 In this tutorial, you are welcome to follow along with the following activities:
 
-Deploy a container on Azure Container Instances
-Deploy Azure Container Services
+* Deploy a container on Azure Container Instances
+* Deploy Azure Container Services with Kubernetes
 
