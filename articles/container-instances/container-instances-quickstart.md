@@ -16,13 +16,13 @@ The button launches an interactive shell that you can use to run all of the step
 
 [![Screenshot showing the Cloud Shell window in the portal](https://github.com/techbunny/LISA17/blob/master/includes/media/cloud-shell-try-it/cloud-shell-safari.png)](https://portal.azure.com)
 
-If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.12 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0]( /cli/azure/install-azure-cli). 
+If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.12 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
 
 ## Create a resource group
 
 Azure Container Instances are Azure resources and must be placed in an Azure resource group, a logical collection into which Azure resources are deployed and managed.
 
-Create a resource group with the [az group create](/cli/azure/group#create) command. 
+Create a resource group with the [az group create](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_create) command. 
 
 The following example creates a resource group named *myResourceGroup* in the *eastus* location.
 
@@ -93,13 +93,3 @@ az container delete --name mycontainer --resource-group myResourceGroup
 ## Next steps
 
 All of the code for the container used in this quick start is available [on GitHub][app-github-repo], along with its Dockerfile. If you'd like to try building it yourself and deploying it to Azure Container Instances using the Azure Container Registry, continue to the Azure Container Instances tutorial.
-
-> [!div class="nextstepaction"]
-> [Azure Container Instances tutorials](./container-instances-tutorial-prepare-app.md)
-
-
-<!-- LINKS -->
-[app-github-repo]: https://github.com/Azure-Samples/aci-helloworld.git
-
-<!-- IMAGES -->
-[aci-app-browser]: ./media/container-instances-quickstart/aci-app-browser.png
