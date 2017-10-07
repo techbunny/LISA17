@@ -12,10 +12,27 @@ az acr create --name lisa17reg2 --resource-group lisa17 --admin-enabled --sku Ma
 
 az acr list --resource-group lisa17 --query "[].{acrLoginServer:loginServer}" --output table
 
-docker tag nginx lisa17reg2.azurecr.io/ngnix:v1
+docker tag nginx lisa17reg2.azurecr.io/nginx:v1
 
-docker push lisa17reg2.azurecr.io/ngnix:v1 
+docker push lisa17reg2.azurecr.io/nginx:v1 
 
 az acr repository list -n lisa17reg2 -o table
-az acr repository show-tags -n lisa17reg2 --repository nginx -o table   <--- Doesn't work
+az acr repository show-tags -n lisa17reg2 --repository nginx -o table
+az acr repository delete -n lisa17reg2 --repository ngnix
+
+
+# Deploy to Azure Container Registry
+
+az acr credential show --name lisa17reg2 --query "passwords[0].value"
+
+az container create --name nginxtest --image lisa17reg2.azurecr.io/nginx:v1 --cpu 1 --memory 1 --registry-password dFs43D/aKfvtSar55RwPStQgsN9DC7u6 --ip-address public -g lisa17
+
+az container show --name nginxtest --resource-group lisa17 --query state
+
+az container show --name nginxtest --resource-group lisa17 --query ipAddress.ip
+
+az container logs --name nginxtest -g lisa17
+
+# Deploy to Azure Container Service
+
 
