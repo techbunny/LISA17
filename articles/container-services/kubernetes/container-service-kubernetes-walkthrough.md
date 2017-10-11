@@ -10,13 +10,23 @@ This quick start assumes a basic understanding of Kubernetes concepts, for detai
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-[!INCLUDE [cloud-shell-try-it.md](https://github.com/techbunny/LISA17/blob/master/includes/cloud-shell-try-it.md)]
+## Launch Azure Cloud Shell
+
+The Azure Cloud Shell is a free Bash shell that you can run directly within the Azure portal. It has the Azure CLI preinstalled and configured to use with your account. Click the **Cloud Shell** button on the menu in the upper-right of the [Azure portal](https://portal.azure.com).
+
+[![Cloud Shell](https://github.com/techbunny/LISA17/blob/master/includes/media/cloud-shell-try-it/cloud-shell-menu.png)](https://portal.azure.com)
+
+The button launches an interactive shell that you can use to run all of the steps in this topic:
+
+[![Screenshot showing the Cloud Shell window in the portal](https://github.com/techbunny/LISA17/blob/master/includes/media/cloud-shell-try-it/cloud-shell-safari.png)](https://portal.azure.com)
+
+If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.12 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
 
 If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0]( /cli/azure/install-azure-cli). 
 
 ## Create a resource group
 
-Create a resource group with the [az group create](/cli/azure/group#create) command. An Azure resource group is a logical group in which Azure resources are deployed and managed. 
+Create a resource group with the [az group create](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_create) command. An Azure resource group is a logical group in which Azure resources are deployed and managed. 
 
 The following example creates a resource group named *myResourceGroup* in the *westeurope* location.
 
@@ -41,7 +51,7 @@ Output:
 
 ## Create Kubernetes cluster
 
-Create a Kubernetes cluster in Azure Container Service with the [az acs create](/cli/azure/acs#create) command. The following example creates a cluster named *myK8sCluster* with one Linux master node and three Linux agent nodes.
+Create a Kubernetes cluster in Azure Container Service with the [az acs create](https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest#az_acs_create) command. The following example creates a cluster named *myK8sCluster* with one Linux master node and three Linux agent nodes.
 
 ```azurecli-interactive 
 az acs create --orchestrator-type kubernetes --resource-group myResourceGroup --name myK8sCluster --generate-ssh-keys 
@@ -53,9 +63,9 @@ After several minutes, the command completes and returns json formatted informat
 
 To manage a Kubernetes cluster, use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), the Kubernetes command-line client. 
 
-If you're using Azure CloudShell, kubectl is already installed. If you want to install it locally, you can use the [az acs kubernetes install-cli](/cli/azure/acs/kubernetes#install-cli) command.
+If you're using Azure CloudShell, kubectl is already installed. If you want to install it locally, you can use the [az acs kubernetes install-cli](https://docs.microsoft.com/en-us/cli/azure/acs/kubernetes?view=azure-cli-latest#az_acs_kubernetes_install_cli) command.
 
-To configure kubectl to connect to your Kubernetes cluster, run the [az acs kubernetes get-credentials](/cli/azure/acs/kubernetes#get-credentials) command. This step downloads credentials and configures the Kubernetes CLI to use them.
+To configure kubectl to connect to your Kubernetes cluster, run the [az acs kubernetes get-credentials](https://docs.microsoft.com/en-us/cli/azure/acs/kubernetes?view=azure-cli-latest#az_acs_kubernetes_get_credentials) command. This step downloads credentials and configures the Kubernetes CLI to use them.
 
 ```azurecli-interactive 
 az acs kubernetes get-credentials --resource-group=myResourceGroup --name=myK8sCluster
