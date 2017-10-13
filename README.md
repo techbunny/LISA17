@@ -18,6 +18,9 @@ To quickly get started creating containers on your computer, download either [Do
 
 To get started creating containers with Docker, I recommend their [Getting Started with Docker](https://docs.docker.com/get-started/) guide.
 
+Steps for Today's Demo - Tutorial #1
+
+
 ## Moving Images to the Cloud
 
 Once you've created a container, you may want to deploy it to a cloud provider. To do that, you'll need to store your container image in a cloud accessible repository.  You can use [Docker Hub](https://hub.docker.com/) or [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
@@ -27,12 +30,16 @@ For Azure Container Registry:
 * [Create a Registry via the Portal](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal)
 * [Push and Pull an image](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli)
 
+Steps for Today's Demo - Tutorial #2
+
 ## Deploy to Azure Container Instances
 
 Azure Container Instances is the quickest way to get a container into Azure. You are not responsible for building, hosting or managing host resources in your Azure subscription. 
 
 * [Create Your First Container Instance](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart)
-* [Deploy an Container Instance from Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-using-azure-container-registry)
+* [Deploy an Container Instance from Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app)
+
+Steps for Today's Demo - Tutorial #3
 
 ## Deploy an Azure Container Service
 
