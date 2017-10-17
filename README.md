@@ -3,6 +3,8 @@
 
 In this tutorial, you are welcome to follow along with the following activities:
 
+* Use a dockerfile to create a containerized application on your desktop.
+* Upload that container to a container registry.
 * [Deploy a container on Azure Container Instances](https://github.com/techbunny/LISA17/blob/master/articles/container-instances/container-instances-quickstart.md)
 * [Deploy Azure Container Services with Kubernetes](https://github.com/techbunny/LISA17/blob/master/articles/container-services/kubernetes/container-service-kubernetes-walkthrough.md)
 
