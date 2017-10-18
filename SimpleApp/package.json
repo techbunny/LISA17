@@ -1,0 +1,14 @@
+{
+  "name": "azwebappdemo",
+  "version": "1.0.0",
+  "description": "Demo app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "jessde@microsoft.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
