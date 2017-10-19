@@ -4,8 +4,7 @@ In this tutorial, you will see how to create a containerized application on your
 
 Before you begin, you will need to install either the Azure CLI or use the Azure Cloud Shell.
 
-* [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
-Most current version is 2.0.19
+* [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) - Current version is 2.0.19
 * [Use the Cloud Shell within the Azure Portal](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart)
 
 ## On Your Computer
