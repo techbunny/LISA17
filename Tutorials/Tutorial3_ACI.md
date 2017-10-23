@@ -8,16 +8,16 @@ az acr credential show --name <acrName> --query "passwords[0].value"
 
 # Deploy the Container in ACI
 
-az container create --name aci-tutorial-app --image <acrLoginServer>/aci-tutorial-app:v1 --cpu 1 --memory 1 --registry-password <acrPassword> --ip-address public -g myResourceGroup
+az container create --name lisa17splash --image <acrLoginServer>/lisa17demo:v1 --cpu 1 --memory 1 --port 3000 --registry-password <acrPassword> --ip-address public -g lisa17
 
 # View the State
 
-az container show --name aci-tutorial-app --resource-group myResourceGroup --query state
+az container show --name lisa17splash --resource-group lisa17 --query state
 
 # Get the IP Address
 
-az container show --name aci-tutorial-app --resource-group myResourceGroup --query ipAddress.ip
+az container show --name lisa17splash --resource-group lisa17 --query ipAddress.ip
 
 # View the Logs
 
-az container logs --name aci-tutorial-app -g myResourceGroup
+az container logs --name lisa17splash -g lisa17
