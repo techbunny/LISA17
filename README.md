@@ -2,7 +2,9 @@
 
 In this tutorial, you will see how to create a containerized application on your computer using Docker, move that image to a cloud registry and then deploy it to Azure Container Instances and Azure Container Service.
 
-Before you begin, you will need to install either the Azure CLI or use the Azure Cloud Shell.
+Before you begin, you will need access to an Azure subscription and need to install either the Azure CLI or use the Azure Cloud Shell.
+
+If you do not have an existing Azure subscription, you my qualify for a free trial or simply use the pay-as-you-go model. [Get An Azure Subscription]
 
 * [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) - Current version is 2.0.19
 * [Use the Cloud Shell within the Azure Portal](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart)

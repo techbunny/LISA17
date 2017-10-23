@@ -2,9 +2,7 @@
 
 ## Have Your Application Handy
 
-For this demo, I'm using a basic Node.js application that displays a web page.  You can find it in the MyApp directory in this repo. 
-
-To use this application, copy or fork the repo from GitHub to a local directory on your machine.  Take note of the location of your application files.
+For this demo, I'm using a basic Node.js application that displays a web page.  You can find it in the MyApp directory in this repo. To use this application, copy or fork the repo from GitHub to a local directory on your machine.  Take note of the location of your application files, such as \YOUR\PATH\SimpleApp.
 
 ## Build Your Docker File
 
@@ -32,13 +30,17 @@ CMD [ "npm", "start" ]
 
 We will be using an Linux image with Node already installed as the base for our application.  The dockerfile will pull it down as needed, or you can pull it down first for fun. 
 
+```
 docker pull node:latest
-
+```
 ## Create a Dockerfile to Customize the Image and Build the Image
 
-docker build -t lisa17demo:v1 <path to dockerfile>
-
+```
+docker build -t lisa17demo:v1 \YOUR\PATH\SimpleApp
+```
 ## Test the Image on Your Machine
-
+```
 docker run -p 3000:3000 lisa17demo:v1
+```
+Open a browser window and go to http://localhost:3000.  Your application should be running.
 
