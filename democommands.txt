@@ -33,6 +33,28 @@ az container show --name nginxtest --resource-group lisa17 --query ipAddress.ip
 
 az container logs --name nginxtest -g lisa17
 
-# Deploy to Azure Container Service
+# Deploy to Azure Container Service (AKS)
+
+az group create --name demoaks --location westus2
+
+az aks create --resource-group demoaks --name firstaks --agent-count 1 --generate-ssh-keys
+
+az aks browse --resource-group demoaks --name firstaks
+
+az aks get-credentials --resource-group demoaks --name firstaks
+
+kubectl run demosplash --image=regdemo17.azurecr.io/lisa17demo:v2
+
+kubectl expose deployment demosplash --port=3000 --target-port=3000 --type=LoadBalancer
+
+kubectl get service demosplash --watch
+
+kubectl scale --replicas=5 deployment/demosplash
+
+az aks scale --resource-group demoaks --name firstaks --agent-count 3
+
+az aks get-versions --resource-group demoaks --name firstaks --output table
+az aks upgrade --resource-group demoaks --name firstaks --kubernetes-version 1.8.1
+az aks show --resource-group demoaks --name firstaks --output table
 
 

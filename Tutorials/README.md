@@ -30,11 +30,15 @@ Azure Container Instances is the quickest way to get a container into Azure. You
 
 Steps for Today's Demo - [Tutorial #3](/Tutorials/Tutorial3_ACI.md)
 
+## Deploy to Azure Container Service (AKS)
+
+Steps for Today's Demo - [Tutorial #4](/Tutorials/Tutorial4_AKS.md)
+
 ## Deploy an Azure Container Service
 
 Azure Container Services gives you more control over the container hosts behind your deployed containers, including the size and number of the agents and the orchestrator used. Azure Container Services currently supports Kubernetes, DC/OS and Docker Swarm (legacy Swarm, not Swarm Mode).
 
-Steps for Today's Demo - [Tutorial #4](/Tutorials/Tutorial4_ACS.md)
+Steps for Today's Demo - [Tutorial #5](/Tutorials/Tutorial5_ACS.md)
 
 * [Deploy Kubernetes on Azure Container Service](https://docs.microsoft.com/en-us/azure/container-service/kubernetes/container-service-kubernetes-walkthrough) - Linux or Windows
 * [Deploy Docker Swarm on Azure Container Service](https://docs.microsoft.com/en-us/azure/container-service/dcos-swarm/container-service-swarm-walkthrough) - Linux only

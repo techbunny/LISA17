@@ -1,6 +1,6 @@
 # LISA17 Tutorial - Containers with Docker, Azure and Kubernetes
 
-In this set of tutorials, you will see how to create a containerized application on your computer using Docker, move that image to a cloud registry and then deploy it to Azure Container Instances and Azure Container Service.
+In this set of tutorials, you will see how to create a containerized application on your computer using Docker, move that image to a cloud registry and then deploy it to Azure Container Instances and Azure Container Services.
 
 Before you begin, you will need access to an Azure subscription and need to install either the Azure CLI or use the Azure Cloud Shell.
 
