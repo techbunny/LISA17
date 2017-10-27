@@ -6,6 +6,8 @@ Before you begin, you will need access to an Azure subscription and need to inst
 
 If you do not have an existing Azure subscription, you my qualify for a free trial or simply use the pay-as-you-go model. [Get An Azure Subscription]
 
-* [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) - Current version is 2.0.19
+* [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) - Current version is 2.0.20
 * [Use the Cloud Shell within the Azure Portal](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart)
+
+[Let's Get Started!](/Tutorials/README.md)
 

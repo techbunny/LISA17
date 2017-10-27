@@ -39,9 +39,7 @@ az group create --name demoaks --location westus2
 
 az aks create --resource-group demoaks --name firstaks --agent-count 1 --generate-ssh-keys
 
-az aks browse --resource-group demoaks --name firstaks
-
-az aks get-credentials --resource-group demoaks --name firstaks
+az aks kubernetes get-credentials --resource-group demoaks --name firstaks
 
 kubectl run demosplash --image=regdemo17.azurecr.io/lisa17demo:v2
 
@@ -57,4 +55,26 @@ az aks get-versions --resource-group demoaks --name firstaks --output table
 az aks upgrade --resource-group demoaks --name firstaks --kubernetes-version 1.8.1
 az aks show --resource-group demoaks --name firstaks --output table
 
+# Deploy to Azure Container Service (ACS)
+
+# Create a Resource Group
+
+az group create --name labcluster --location eastus
+
+az acs create --orchestrator-type kubernetes --resource-group labcluster --name kuberlab --generate-ssh-keys
+
+az acs kubernetes get-credentials --resource-group labcluster --name kuberlab 
+
+kubectl get nodes
+
+az acs kubernetes browse -g lisa17acs -n kubelisa17
+
+kubectl run lisasplash --image=regdemo17.azurecr.io/lisa17demo:v2
+
+kubectl expose deployment lisasplash --port=3000 --target-port=3000 --type=LoadBalancer
+
+kubectl get service lisasplash --watch
+
+kubectl scale --replicas=10 deployment/lisasplash
+ 
 
