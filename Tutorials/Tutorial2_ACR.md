@@ -7,33 +7,43 @@ Before doing anything on Azure, you need log in with your credentials to access 
 az login
 ```
 ## Create a Resource Group
-A resource group is collection of Azure components that share the same purpose or lifecycle. 
+A resource group is collection of Azure components that share the same purpose or lifecycle.  It's recommended that you keep your Registry in a separate resource group from your deployments. 
+
+NOTE: As we go through the tutorials you'll be creating several resource group in Azure. For reference they will be:
+
+Resource Group for Container Registry -  <RGNAME1>
+Resource Group for Container Instances - <RGNAME2>
+Resource Group for Azure Container Service (ACS) - <RGNAME3>
+Resource Group for Azure Container Service (AKS) - <RGNAME4>
+
 ```
-az group create --name lisa17 --location eastus
+az group create --name <RGNAME1> --location <LOC>
 ```
 ## Create a Container Registry
 ```
-az acr create --name lisa17reg --resource-group lisa17 --admin-enabled --sku Managed_Basic
+az acr create --name <ACRNAME> --resource-group <RGNAME1> --admin-enabled --sku Managed_Basic
 
-az acr list --resource-group lisa17 --query "[].{acrLoginServer:loginServer}" --output table
+az acr list --resource-group <RGNAME1> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 ## Log in to ACR
 ```
-az acr login --name lisa17reg 
+az acr login --name <ACRNAME> 
 
-az acr login --name lisa17reg --username lisa17reg --password <password string from portal>
+az acr login --name <ACRNAME> --username <USERNAME> --password <password string from portal>
 ```
+NOTE: The ACRNAME and USERNAME are usually the same.
+
 ## Push Image to ACR
 Before pushing an image to the cloud registry, it has to be tagged with the full name of your registry login server.
 ```
-docker tag lisa17:v3 lisa17reg2.azurecr.io/lisa17:v3
+docker tag <IMAGENAME>:v1 <ACRNAME>.azurecr.io/<IMAGENAME>:v1
 
-docker push lisa17reg2.azurecr.io/lisa17:v3
+docker push <ACRNAME>.azurecr.io/<IMAGENAME>:v1
 ```
 ## List Images and Tags in ACR
 ```
-az acr repository list -n lisa17reg2 -o table
+az acr repository list -n <ACRNAME> -o table
 
-az acr repository show-tags -n lisa17reg2 --repository lisa17 -o table
+az acr repository show-tags -n <ACRNAME> --repository lisa17 -o table
 ```
 

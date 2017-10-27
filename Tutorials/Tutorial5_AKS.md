@@ -5,44 +5,44 @@ az acs kubernetes install-cli
 ```
 # Create a Resource Group
 ```
-az group create --name testaks --location westus2
+az group create --name <RGNAME3> --location <LOC>  (Must be "westus" or "westus2", due to preview limitations.)
 ```
 # Create Kubernetes Cluster
 ```
-az aks create --resource-group testaks --name firstaks --agent-count 1 --generate-ssh-keys
+az aks create --resource-group <RGNAME3> --name <AKSNAME> --agent-count 1 --generate-ssh-keys
 ```
 # Connect with Kubectl
 ```
-az aks get-credentials --resource-group testaks --name firstaks
+az aks get-credentials --resource-group <RGNAME3> --name <AKSNAME>
 ```
 # Browse to a Cluster with the UI
 ```
-az aks browse --resource-group testaks --name firstaks
+az aks browse --resource-group <RGNAME3> --name <AKSNAME>
 ```
 # Deploy a Container
 ```
-kubectl run lisasplash --image=regdemo17.azurecr.io/lisa17demo:v2
+kubectl run <APPNAME> --image <ACRNAME>.azurecr.io/<IMAGENAME>:v1
 
-kubectl expose deployment lisasplash --port=3000 --target-port=3000 --type=LoadBalancer
+kubectl expose deployment <APPNAME> --port=3000 --target-port=3000 --type=LoadBalancer
 ```
 # Check on Deployment
 ```
-kubectl get service lisasplash --watch
+kubectl get service <APPNAME> --watch
 ```
 # Scale Containers
 ```
-kubectl scale --replicas=5 deployment/lisasplash
+kubectl scale --replicas=5 deployment/<APPNAME>
 ```
 # Scale Nodes
 ```
-az aks scale --resource-group testaks --name firstaks --agent-count 3
+az aks scale --resource-group <RGNAME3> --name <AKSNAME> --agent-count 3
 ```
 # Upgrade Cluster
 ```
-az aks get-versions --resource-group testaks --name firstaks --output table
+az aks get-versions --resource-group <RGNAME3> --name <AKSNAME> --output table
 
-az aks upgrade --resource-group testaks --name firstaks --kubernetes-version 1.8.1
+az aks upgrade --resource-group <RGNAME3> --name <AKSNAME> --kubernetes-version 1.8.1
  
-az aks show --resource-group testaks --name firstaks --output table
+az aks show --resource-group <RGNAME3> --name <AKSNAME> --output table
 ```
 

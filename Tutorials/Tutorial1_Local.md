@@ -36,11 +36,11 @@ docker pull node:latest
 ## Create a Dockerfile to Customize the Image and Build the Image
 
 ```
-docker build -t lisa17demo:v1 \YOUR\PATH\SimpleApp
+docker build -t <IMAGENAME>:v1 \YOUR\PATH\SimpleApp
 ```
 ## Test the Image on Your Machine
 ```
-docker run -p 3000:3000 lisa17demo:v1
+docker run -p 3000:3000 <IMAGENAME>:v1
 ```
 Open a browser window and go to http://localhost:3000.  Your application should be running.
 
