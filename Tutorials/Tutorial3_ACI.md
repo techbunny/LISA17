@@ -26,3 +26,5 @@ az container show --name <APPNAME> --resource-group <RGNAME2> --query ipAddress.
 ```
 az container logs --name <APPNAME> -g <RGNAME2>
 ```
+
+Go to [Tutorial #4](/Tutorials/Tutorial4_ACS.md)

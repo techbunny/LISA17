@@ -31,4 +31,6 @@ kubectl expose deployment <APPNAME> --port=3000 --target-port=3000 --type=LoadBa
 kubectl scale --replicas=5 deployment/<APPNAME>
 ``` 
 
+Finally, head to [Tutorial #5](/Tutorials/Tutorial5_AKS.md)
+
 

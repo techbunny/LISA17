@@ -46,3 +46,4 @@ az aks upgrade --resource-group <RGNAME3> --name <AKSNAME> --kubernetes-version 
 az aks show --resource-group <RGNAME3> --name <AKSNAME> --output table
 ```
 
+

@@ -11,10 +11,10 @@ A resource group is collection of Azure components that share the same purpose o
 
 NOTE: As we go through the tutorials you'll be creating several resource group in Azure. For reference they will be:
 
-Resource Group for Container Registry -  <RGNAME1>
-Resource Group for Container Instances - <RGNAME2>
-Resource Group for Azure Container Service (ACS) - <RGNAME3>
-Resource Group for Azure Container Service (AKS) - <RGNAME4>
+* Resource Group for Container Registry -  <RGNAME1>
+* Resource Group for Container Instances - <RGNAME2> (Suggest EASTUS or WESTUS)
+* Resource Group for Azure Container Service (ACS) - <RGNAME3>
+* Resource Group for Azure Container Service (AKS) - <RGNAME4> (Must be in WESTUS or WESTUS2, due to preview of AKS)
 
 ```
 az group create --name <RGNAME1> --location <LOC>
@@ -46,4 +46,6 @@ az acr repository list -n <ACRNAME> -o table
 
 az acr repository show-tags -n <ACRNAME> --repository lisa17 -o table
 ```
+
+Onward to [Tutorial #3](/Tutorials/Tutorial3_ACI.md)
 
