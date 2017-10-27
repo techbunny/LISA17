@@ -10,7 +10,6 @@ az acr credential show --name <ACRNAME> --query "passwords[0].value"
 Because we want to keep our container deployments separate from our Registry, we need to create a new resource group.
 ```
 az group create --name <RGNAME2> --location <LOC>
-```
 
 az container create --name <APPNAME> --image <acrLoginServer>/lisa17demo:v1 --cpu 1 --memory 1 --port 3000 --registry-password <acrPassword> --ip-address public -g <RGNAME2>
 ```
