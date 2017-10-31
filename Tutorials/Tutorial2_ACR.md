@@ -20,12 +20,16 @@ NOTE: As we go through the tutorials you'll be creating several resource group i
 az group create --name <RGNAME1> --location <LOC>
 ```
 ## Create a Container Registry
+
+For this registry, we are creating a "Managed" registry, which includes additional features, particularly the ability to delete images once uploaded.  Other choices are Classic, Standard and Premium.
+
 ```
 az acr create --name <ACRNAME> --resource-group <RGNAME1> --admin-enabled --sku Managed_Basic
 
 az acr list --resource-group <RGNAME1> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 ## Log in to ACR
+
 ```
 az acr login --name <ACRNAME> 
 
