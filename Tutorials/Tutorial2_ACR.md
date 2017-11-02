@@ -14,7 +14,7 @@ NOTE: As we go through the tutorials you'll be creating several resource group i
 * Resource Group for Container Registry -  RGNAME1
 * Resource Group for Container Instances - RGNAME2 (Suggest EASTUS or WESTUS)
 * Resource Group for Azure Container Service (ACS) - RGNAME3
-* Resource Group for Azure Container Service (AKS) - RGNAME4 (Must be in WESTUS or WESTUS2, due to preview of AKS)
+* Resource Group for Azure Container Service (AKS) - RGNAME4 (Must be in UKWEST or WESTUS2, due to preview of AKS)
 
 ```
 az group create --name <RGNAME1> --location <LOC>
@@ -24,15 +24,13 @@ az group create --name <RGNAME1> --location <LOC>
 For this registry, we are creating a "Managed" registry, which includes additional features, particularly the ability to delete images once uploaded.  Other choices are Classic, Standard and Premium.
 
 ```
-az acr create --name <ACRNAME> --resource-group <RGNAME1> --admin-enabled --sku Managed_Basic
+az acr create --name <ACRNAME> --resource-group <RGNAME1> --admin-enabled --sku Basic
 
 az acr list --resource-group <RGNAME1> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 ## Log in to ACR
 
 ```
-az acr login --name <ACRNAME> 
-
 az acr login --name <ACRNAME> --username <USERNAME> --password <password string from portal>
 ```
 NOTE: The ACRNAME and USERNAME are usually the same.

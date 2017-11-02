@@ -14,15 +14,15 @@ az group create --name <RGNAME3> --location <LOC>  (Must be "westus" or "westus2
 ## Create Kubernetes Cluster
 This single line will create the default AKS deployment with Kubernetes. This preview of AKS currently only supports Linux agents and workloads.
 ```
-az aks create --resource-group <RGNAME3> --name <AKSNAME> --agent-count 1 --generate-ssh-keys
+az aks create --resource-group <RGNAME4> --name <AKSNAME> --agent-count 1 --generate-ssh-keys
 ```
 ## Connect with Kubectl
 ```
-az aks get-credentials --resource-group <RGNAME3> --name <AKSNAME>
+az aks get-credentials --resource-group <RGNAME4> --name <AKSNAME>
 ```
 ## Browse to a Cluster with the UI
 ```
-az aks browse --resource-group <RGNAME3> --name <AKSNAME>
+az aks browse --resource-group <RGNAME4> --name <AKSNAME>
 ```
 ## Deploy a Container
 ```
@@ -40,15 +40,15 @@ kubectl scale --replicas=5 deployment/<APPNAME>
 ```
 ## Scale Nodes
 ```
-az aks scale --resource-group <RGNAME3> --name <AKSNAME> --agent-count 3
+az aks scale --resource-group <RGNAME4> --name <AKSNAME> --agent-count 3
 ```
 ## Upgrade Cluster
 ```
 az aks get-versions --resource-group <RGNAME3> --name <AKSNAME> --output table
 
-az aks upgrade --resource-group <RGNAME3> --name <AKSNAME> --kubernetes-version 1.8.1
+az aks upgrade --resource-group <RGNAME4> --name <AKSNAME> --kubernetes-version 1.8.1
  
-az aks show --resource-group <RGNAME3> --name <AKSNAME> --output table
+az aks show --resource-group <RGNAME4> --name <AKSNAME> --output table
 ```
 
 
