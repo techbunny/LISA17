@@ -35,6 +35,7 @@ kubectl get nodes
 az acs kubernetes browse -g <RGNAME3> -n <ACSNAME>
 ```
 
+
 ## Deploy a Container
 
 ```
